@@ -164,16 +164,22 @@ showcaseflex div ul li p{
 /* Showcase grid 1 */
 
 .showcasegrid1 {
-    display: grid;
-    grid-template: repeat(1 , 100px) / repeat(3 , 1fr);
-    grid-gap: 20px;
-    max-width: 80%;
-    margin: 20px auto 280px auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 70%;
+    margin: 20px auto 150px auto;
+}
+
+.create{
+    max-width: 38%;
+}
+
+.plain, .sneak{
+    margin-top: 10px;
 }
 
 .create img, .plain img, .sneak img{
     display: block;
-    max-width: 50%;
     margin: 40px auto 35px auto;
 }
 
@@ -184,21 +190,29 @@ showcaseflex div ul li p{
     font-weight: 600;
 }
 
-.create p, .plain p, .sneak p{
+.create p{
     text-align: center;
     line-height: 1.7em;
     color: hsl(201, 11%, 66%);
     font-weight: 400;
 }
 
+ .plain p, .sneak p{
+    text-align: center;
+    line-height: 1.7em;
+    color: hsl(201, 11%, 66%);
+    font-weight: 400;
+}
+
+
+
 /* Showcase grid 2 */
 
 .showcasegrid2{
-    display: grid;
-    grid-template: repeat(1 , 100px) / repeat(5 , 1fr);
+    display: flex;
     max-width: 80%;
-    grid-gap: 10px;
-    margin: 100px auto 100px auto;
+    justify-content: space-between;
+    margin: 20px auto 150px auto;
 }
 
 .store{
@@ -220,19 +234,34 @@ showcaseflex div ul li p{
 
 /* FOOTER */
 
-.footerwrapper{
-    background-color: rgb(241, 240, 240);
+
+.footerlogo{
+    margin-left: 50px;
+}
+
+.firstlist{
+    margin-left: 60px;
+}
+
+.secondlist{
+    margin-left: 70px;
+}
+
+.thirdlist{
+    margin-left: 70px;
 }
 
 footer{
-    max-width: 80%;
-    padding: 20px 0;
-    margin: 250px auto 0 auto;
-    display: grid;
-    grid-gap: 50px;
-    grid-template: repeat(1 , 100px) / repeat(13 , 1fr);
-    grid-template-areas: 
-    "l l f f p p i i . s s s";
+    display: flex;
+    justify-content: center;
+    background-color: rgb(241, 240, 240);
+    margin-top: 250px;
+    padding: 30px 40px;
+}
+
+
+footer ul:last-child{
+    margin-left: auto;
 }
 
 .footerlogo img{
@@ -240,32 +269,14 @@ footer{
     height: auto;
 }
 
-.footerlogo{
-    grid-area: l;
-}
-
-.firstlist{
-    grid-area: f;
-}
-
-.secondlist{
-    grid-area: p;
-}
-
-.thirdlist{
-    grid-area: i;
-}
-
 .footericon{
-    grid-area: s;
     display: flex;
     gap: 15px;
-    margin-top: 10px;
-    margin-left: 120px;
+    margin-top: 30px;
 }
 
 footer li{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 footer a{
@@ -378,12 +389,20 @@ footer a:hover{
 
     footer{
         display: block;
+        text-align: center;
+        margin-top: 250px;
     }
 
-    .footerlogo img{
-        max-width: 20%;
-        margin: 20px auto;
+    .footerlogo, .firstlist, .secondlist, .thirdlist{
         display: block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+
+    .footerlogo img{
+        max-width: 40%;
+        margin: 20px auto;
     }
 
     footer ul li a{
