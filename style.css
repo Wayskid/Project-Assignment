@@ -372,20 +372,22 @@ footer a:hover{
         height: auto;
     }
 
-    .showcasegrid1{
-        grid: none;
-        margin: 20px auto 20px auto;
+    .showcasegrid1, .create{
+        display: block;
+        margin: 80px auto;
+        max-width: 100%;
     }
 
-
     .showcasegrid2{
-        grid: none;
+        display: block;
     }
 
     .showcasegrid2 img{
+        display: block;
         max-width: 100%;
-        margin: 20px auto 70px auto;
+        margin: 100px auto;
     }
+
 
     footer{
         display: block;
